@@ -92,9 +92,9 @@ img:"images/p6.jpg"
 //   console.log(potrait.length)
 let x ="";
 let count =0;
-// let fun =0;
+let fun ="";
 function showmore(){
-    
+    x=fun;
     for (let i=0; i<potrait.length;i++){ 
         
         x+=` <div class="sublist">
@@ -146,7 +146,39 @@ count++;
  
 // console.log(showmore())
   document.querySelector("#portrait-section").innerHTML=p;
+ function showless(){
+//  for (let i=0; i<potrait.length;i++) {
+//     // console.log(i)
+//     if(count >=0 && count<3){
+// // console.log(potrait[key].name)
+// p+=` <div class="sublist">
+//     <div class="product-card">
+//         <img src=${potrait[i].img} alt="Portrait 1" style="width: 50%;">
+//         <h3>${potrait[i].name}</h3>
+//         <p>${potrait[i].artistname}</p>
+//         <p>${potrait[i].price}</p>
+//         <button style="border-radius: 5px; padding: 5px;background-color: #343ca0;
+//         color: white; border: none;" >Add to Cart</button>
+//     </div>
+//     <!-- Add more portrait cards -->
+//     </div>`
 
+// count++; 
+//     } 
+//   }
+document.querySelector("#portrait-section").innerHTML=p;
+
+document.querySelector("#btnShowMore").style.display="block";
+document.querySelector("#btnShowLess").style.display="none";
+
+}
+// potrait ends
+    
+
+
+
+
+// landscape data
   let landscape=[
     {
         name: "landscape cave",
@@ -158,10 +190,85 @@ count++;
         name: "landscape cave",
         price:"1200$",
         artistname: "John keat",
+    img:"images/L3.webp"
+    },
+    {
+        name: "landscape cave",
+        price:"1200$",
+        artistname: "John keat",
+    img:"images/L4.avif"
+    },
+    {
+        name: "landscape cave",
+        price:"1200$",
+        artistname: "John keat",
     img:"images/L2.jpg"
     },
-    {},
-    {},
-    {},
-    {},
+    {  name: "landscape cave",
+    price:"1200$",
+    artistname: "John keat",
+img:"images/L5.webp"},
+    {  name: "landscape cave",
+    price:"1200$",
+    artistname: "John keat",
+img:"images/L6.jpg"},
   ]
+  let y ="";
+ let count1=0;
+ let fun1 ="";
+
+ function showmore1(){
+   y=fun1;
+    for (let j=0; j<landscape.length;j++){ 
+        
+        y+=` <div class="sublist">
+    <div class="product-card">
+        <img src="${landscape[j].img}"alt="Portrait 1" style="width: 50%;">
+        <h3>${landscape[j].name}</h3>
+        <p>${landscape[j].artistname}</p>
+        <p>${landscape[j].price}</p>
+        <button style="border-radius: 5px; padding: 5px;background-color: #343ca0;
+        color: white; border: none;" >Add to Cart</button>
+    </div>
+    <!-- Add more portrait cards -->
+    </div>`
+}
+
+document.querySelector("#landscape-section").innerHTML=y;
+document.querySelector("#showMoreLanscap").style.display="none";
+document.querySelector("#showLessLanscap").style.display="block";
+
+ }
+ let q="";
+ for (let j=0; j<landscape.length;j++) {
+    // console.log(j)
+    if(count1 >=0 && count1<3){
+// console.log(landscape[key].name)
+q+=`      <div class="product-card">
+<img src="${landscape[j].img}" alt="Landscape 1" style="width: 50%;"> 
+<h3>${landscape[j].name}</h3>
+<p>${landscape[j].artistname}</p>
+<p>${landscape[j].price}</p>
+<button style="border-radius: 5px; padding: 5px;background-color: #343ca0;
+color: white; border: none;" >Add to Cart</button>
+</div>`
+
+count1++; 
+
+
+
+    }
+   
+    document.querySelector("#landscape-section").innerHTML=q;
+    
+    
+  }
+  console.log(q)
+ 
+ function showless1(){
+    document.querySelector("#landscape-section").innerHTML=q;
+    document.querySelector("#showMoreLanscap").style.display="block";
+document.querySelector("#showLessLanscap").style.display="none";
+
+ }
+//  console.log(landscape[j].img)
